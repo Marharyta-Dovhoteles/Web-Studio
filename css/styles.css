@@ -28,6 +28,7 @@ a:hover,
 a:focus {
   color: var(--accent-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--accent-color);
 }
 
 .container {
@@ -49,13 +50,13 @@ a:focus {
   margin-left: auto;
   margin-right: auto;
   border-bottom: 1px solid #ececec;
-  
 }
 
 .header-container {
   display: flex;
   align-items: center;
 }
+
  .logo{
   margin-right: 93px;
 }
@@ -73,12 +74,12 @@ a:focus {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--logo-text-color);
-
 }
 
 .logo-child {
   color: var(--accent-color);
 }
+
 .logo:hover {
   color: var(--logo-text-color);
 }
@@ -93,6 +94,7 @@ a:focus {
   padding: 0;
   margin: 0;
 }
+
 .nav-list {
   display: flex;
   justify-content: space-between;
@@ -151,6 +153,10 @@ a:focus {
   margin-right: 0;
 }
 
+.item-list-feedback:hover{
+  color: var(--accent-color);
+}
+
 .auth-nav {
   color: var(--primery-text-color);
   font-weight: 500;
@@ -180,17 +186,21 @@ a:focus {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  fill: #757575;
 }
+
 .svg-envelope{
   Width: 16px;
   Height: 12px;
   margin-right: 10px;
 }
+
 .svg-vectortel{
   Width: 10px;
   Height: 16px;
   margin-right: 10px;
 }
+
 .svg-icons{
   width: 70px;
   height: 70px;
@@ -306,7 +316,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: #f5f4fa;
   border-radius: 4px;
   width: 270px;
@@ -437,7 +446,7 @@ h3 {
   margin: 0;
 }
 
-.card {
+.card-our-team {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
   0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -459,9 +468,8 @@ h3 {
   padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.875;
-  width: 200px;
-  height: 50px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
 }
 
 .btn-hero:hover,
@@ -482,6 +490,7 @@ h3 {
   border: 1px solid transparent;
   margin: 0;
   height: 38px;
+  background: #F5F4FA;
 }
 
 .menu {
@@ -505,6 +514,7 @@ h3 {
   background-color: var(--accent-color);
   color: var(--hero-text-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .flex-element {
@@ -531,20 +541,26 @@ h3 {
   width: 370px;
   height: 294px;
   box-shadow: none;
+  overflow: hidden;
 }
 
 .card::before{
+  display: inline-block;
   content: "";
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(33, 150, 243, 0.9);
   opacity: 0;
   transform: translateY(100%);
   pointer-events: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .flex-element:hover .card::before{
+  box-sizing: border-box;
   transform: translateY(0);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 1;
@@ -584,7 +600,7 @@ h3 {
 }
 
 .info {
-   font-weight: 400;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
@@ -592,7 +608,8 @@ h3 {
 }
 
 .element-description{
-padding: 20px 24px;
+  position: absolute;
+  padding: 20px 24px;
 }
 
 /*footer*/
@@ -650,7 +667,6 @@ transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .location {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
   margin-right: 70px;
   color: var(--hero-text-color);
   font-size: 14px;
@@ -739,18 +755,12 @@ border-radius: 4px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  border: none;
   background-color: var(--hero-text-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .svg-close {
  fill: var(--hero-text-color);
- stroke: rgba(0, 0, 0, 0.1);
- border-radius: 50%;
-}
-
-.svg-close:hover{
-  stroke: var(--accent-color);
 }
 
 .icon-close{
@@ -761,4 +771,6 @@ border-radius: 4px;
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
